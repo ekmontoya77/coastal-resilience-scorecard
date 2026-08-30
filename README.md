@@ -1,2 +1,2 @@
-# coastal-resilience-partnership
-Campaign landing page for UNDRR-supported ARISE US Coastal Resilience Partnership, a global initiative
+# coastal-resilience-scorecard
+Campaign landing page for UNDRR-supported ARISE Coastal Resilience Partnership, a global open-source initiative on coastal resilience
