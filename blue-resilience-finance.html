@@ -32,6 +32,7 @@
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   em, i, cite, address { font-style: normal; }
+  a { color: var(--electric); }
   .accent-italic { font-style: italic; }
 
   html { scroll-behavior: smooth; }
@@ -1003,6 +1004,12 @@
     color: var(--muted); margin-bottom: 1.2rem;
   }
   .mechanism-step { margin-bottom: 0.95rem; }
+  .mechanism-step p a {
+    color: var(--electric); text-decoration: none;
+    border-bottom: 1px solid rgba(98,201,255,0.45);
+    transition: border-color 0.2s;
+  }
+  .mechanism-step p a:hover { border-color: var(--electric); }
   .mechanism-step:last-child { margin-bottom: 0; }
   .mechanism-step-label {
     font-family: 'DM Mono', monospace;
@@ -1161,7 +1168,7 @@
     <li><a href="scorecard.html">Scorecard</a></li>
     <li><a href="stakeholders.html">Stakeholders</a></li>
     <li><a href="blue-resilience-finance.html">Finance</a></li>
-    <li><a href="advisory-board.html">Board</a></li>
+    <li><a href="advisory-board.html">Governance</a></li>
   </ul>
   <div class="nav-actions">
     <a href="index.html#join" class="nav-cta">Get Involved</a>
@@ -1359,7 +1366,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      Coastal Resilience Scorecard
+      ARISE Coastal Resilience Scorecard
       <span>A global, open-source initiative nested within the World Ocean Council Centre of Excellence for Coastal Resilience</span>
     </div>
     <ul class="footer-links">
@@ -1368,7 +1375,7 @@
       <li><a href="scorecard.html">Scorecard</a></li>
       <li><a href="stakeholders.html">Stakeholders</a></li>
       <li><a href="blue-resilience-finance.html">Finance</a></li>
-      <li><a href="advisory-board.html">Board</a></li>
+      <li><a href="advisory-board.html">Governance</a></li>
       <li><a href="index.html#join">Contact</a></li>
     </ul>
     <div class="footer-copy">© 2026 Coastal Resilience Scorecard · ARISE</div>
