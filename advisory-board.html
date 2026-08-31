@@ -1027,18 +1027,22 @@
     margin-bottom: 3rem; line-height: 1.75;
   }
   .join-form {
-    display: flex; gap: 0; max-width: 520px; margin: 0 auto 1.5rem;
+    display: flex; flex-direction: column; gap: 0.7rem;
+    max-width: 520px; margin: 0 auto 1.5rem; text-align: left;
   }
-  .join-form input {
-    flex: 1;
+  .join-form input, .join-form textarea {
+    width: 100%; box-sizing: border-box;
     font-family: 'Source Serif 4', serif;
     font-size: 0.95rem;
     background: rgba(255,255,255,0.06);
-    border: 1px solid var(--border); border-right: none;
+    border: 1px solid var(--border);
     color: #fff; padding: 1rem 1.4rem;
     outline: none;
     transition: border-color 0.2s;
   }
+  .join-form textarea { min-height: 128px; resize: vertical; line-height: 1.6; }
+  .join-form input:focus, .join-form textarea:focus { border-color: var(--accent-bright); }
+  .join-form input::placeholder, .join-form textarea::placeholder { color: var(--muted); }
   .join-form input::placeholder { color: var(--muted); }
   .join-form input:focus { border-color: var(--teal); }
   .join-form button {
@@ -1047,7 +1051,7 @@
     background: var(--teal); color: #fff;
     border: 1px solid var(--teal); padding: 1rem 1.8rem;
     cursor: pointer; transition: background 0.2s;
-    white-space: nowrap;
+    white-space: nowrap; width: 100%;
   }
   .join-form button:hover { background: var(--teal-lt); }
   .join-note {
@@ -1135,8 +1139,7 @@
     .hero-emblem { width: 84px; height: 84px; }
     .hero-title { text-align: center !important; }
     .hero-stats { gap: 2rem; flex-wrap: wrap; }
-    .join-form { flex-direction: column; }
-    .join-form input { border-right: 1px solid var(--border); border-bottom: none; }
+
     .footer-inner { flex-direction: column; align-items: flex-start; }
   }
 </style>
