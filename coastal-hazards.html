@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scorecard &middot; Coastal Resilience Scorecard</title>
+<title>Universal Coastal Hazards &middot; Coastal Resilience Scorecard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -1220,7 +1220,6 @@
     .footer-inner { flex-direction: column; align-items: flex-start; }
   }
 </style>
-</head>
 <body>
 
 <!-- NAV -->
@@ -1248,78 +1247,96 @@
   </div>
 </nav>
 
+<style>
+  .hz-icon { margin-bottom: 1.1rem; }
+  .hz-icon svg { width: 34px; height: 34px; display: block; }
+  .hz-card--amber .hz-icon { color: var(--amber); }
+  .hz-card--teal .hz-icon { color: var(--teal-lt); }
+  .hz-card--purple .hz-icon { color: var(--purple-lt); }
+  .challenge-card.hz-card--amber::after { background: linear-gradient(to right, var(--amber), transparent); }
+  .challenge-card.hz-card--teal::after { background: linear-gradient(to right, var(--teal-lt), transparent); }
+  .challenge-card.hz-card--purple::after { background: linear-gradient(to right, var(--purple-lt), transparent); }
+
+  .hz-list { list-style: none; margin-top: 0.5rem; }
+  .hz-list li {
+    font-size: 0.86rem; font-weight: 300; color: var(--mist);
+    line-height: 1.6; padding: 0.42rem 0 0.42rem 1rem; position: relative;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .hz-list li:first-child { border-top: none; padding-top: 0; }
+  .hz-list li::before {
+    content: ''; position: absolute; left: 0; top: 0.82rem;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+  }
+  .hz-list li strong { color: #fff; font-weight: 600; }
+
+  .hz-footnote {
+    margin-top: 2.4rem; font-size: 0.82rem; font-style: italic;
+    color: var(--muted); max-width: 640px;
+  }
+
+  .hz-links { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1.7rem; }
+</style>
+
 <div style="height:7.5rem;"></div>
 
-<section class="scorecard-section" id="scorecard">
+<section class="scorecard-section" id="coastal-hazards">
   <div class="container">
     <div class="scorecard-inner scorecard-single reveal">
-      <div class="pkg">
-        <p class="pkg-label">The Scorecard Package &middot; Version 1.1</p>
-        <p class="pkg-intro">Each download is a complete assessment kit. Choose the depth that fits your city team &mdash; each track pairs a scorecard document with its matching scoring tool, and a single user guide serves both.</p>
-        <div class="pkg-tracks">
-          <div class="pkg-track">
-            <div class="pkg-track-head" style="color: var(--phase-1);">
-              <span class="pkg-dot" style="background: var(--phase-1);"></span>Long Form
-            </div>
-            <p class="pkg-track-note">Full-depth assessment for teams undertaking a comprehensive readiness review.</p>
-            <div class="pkg-asset"><span class="pkg-fmt">PDF</span><span>Long Form Scorecard</span></div>
-            <div class="pkg-asset"><span class="pkg-fmt">XLSX</span><span>Long Form Scoring Tool</span></div>
-          </div>
-          <div class="pkg-track">
-            <div class="pkg-track-head" style="color: var(--phase-3);">
-              <span class="pkg-dot" style="background: var(--phase-3);"></span>Short Form
-            </div>
-            <p class="pkg-track-note">Rapid diagnostic for a first pass, workshop setting, or preliminary screening.</p>
-            <div class="pkg-asset"><span class="pkg-fmt">PDF</span><span>Short Form Scorecard</span></div>
-            <div class="pkg-asset"><span class="pkg-fmt">XLSX</span><span>Short Form Scoring Tool</span></div>
-          </div>
-        </div>
-        <p class="pkg-join">&darr; &nbsp; Both tracks supported by &nbsp; &darr;</p>
-        <div class="pkg-shared">
-          <div class="pkg-shared-head">
-            <span class="pkg-dot" style="background: var(--phase-2);"></span>User Guide
-            <span class="pkg-fmt" style="margin-left:0.3rem;">PDF</span>
-          </div>
-          <p class="pkg-shared-note">How to run the assessment, score consistently across departments, and interpret the results &mdash; applies to both the Long Form and Short Form tracks.</p>
-        </div>
+      <p class="pkg-label">Understanding Universal Coastal Hazards</p>
+      <p class="pkg-intro">Three hazard groups engulf the assessment &mdash; the risks nearly every coastal city shares &mdash; which keeps scores comparable within and alongside other cities.</p>
+
+      <div class="hz-links">
+        <a class="essential-chip" href="scorecard.html#scorecard">&larr; The Ten Essentials</a>
+        <a class="essential-chip" href="blue-resilience-finance.html">Blue &amp; Resilience Finance standards &rarr;</a>
+      </div>
+    </div>
+
+    <div class="challenge-grid reveal reveal-delay-1">
+      <div class="challenge-card hz-card--amber">
+        <div class="hz-icon"><svg viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M256 32c12.5 0 24.1 6.4 30.8 17L503.4 394.4c5.6 8.9 8.6 19.2 8.6 29.7c0 30.9-25 55.9-55.9 55.9L55.9 480C25 480 0 455 0 424.1c0-10.5 3-20.8 8.6-29.7L225.2 49c6.6-10.6 18.3-17 30.8-17zm65 192L256 120.4 176.9 246.5l18.3 24.4c6.4 8.5 19.2 8.5 25.6 0l25.6-34.1c6-8.1 15.5-12.8 25.6-12.8l49 0z"/></svg></div>
+        <div class="challenge-title">Geohazard</div>
+        <ul class="hz-list">
+          <li>Coastal erosion</li>
+          <li>Compressible &amp; expansive soil</li>
+          <li>Earthquake (shockwave, landslides)</li>
+          <li>Landslide (non-seismic)</li>
+          <li>Liquefaction</li>
+          <li>Sand encroachment</li>
+          <li>Subsidence &amp; uplift</li>
+        </ul>
       </div>
 
-      <div>
-        <p class="section-tag">Scorecard</p>
-        <h2 class="scorecard-title">The Coastal Resilience Scorecard</h2>
-        <p class="scorecard-body">
-          City teams use the Scorecard to assess strengths and gaps across the <a href="https://mcr2030.undrr.org/ten-essentials-making-cities-resilient" target="_blank" rel="noopener">10 Coastal Essentials</a> — producing an evidence-based diagnostic that directly drives investment prioritization, strategy sequencing, and blue finance use-of-proceeds design.
-        </p>
-        <div class="essentials-strip">
-          <span class="essential-chip">E1 · Organize for Disaster Resilience</span>
-          <a class="essential-chip" href="coastal-hazards.html">E2 · Identify, Understand Use Current and Future Risk Scenarios</a>
-          <span class="essential-chip">E3 · Strengthen Financial Capacity for Resilience</span>
-          <span class="essential-chip">E4 · Pursue Resilient Urban Development and Design</span>
-          <span class="essential-chip">E5 · Safeguard Natural Buffers to Enhance Ecosystems&rsquo; Protective Functions</span>
-          <span class="essential-chip">E6 · Strengthen Institutional Capacity for Resilience</span>
-          <span class="essential-chip">E7 · Understand and Strengthen Societal Capacity for Resilience</span>
-          <span class="essential-chip">E8 · Increase Infrastructure Resilience</span>
-          <span class="essential-chip">E9 · Ensure Effective Disaster Response</span>
-          <span class="essential-chip">E10 · Expedite Recovery and Build Back Better</span>
-        </div>
-        <p class="essentials-note">
-          The Ten Essentials are stewarded by <a href="https://mcr2030.undrr.org/ten-essentials-making-cities-resilient" target="_blank" rel="noopener">MCR2030 (Making Cities Resilient 2030)</a>, the UNDRR-led local resilience initiative. They were developed to accelerate implementation of the Sendai Framework for Disaster Risk Reduction (2015&ndash;2030) at the scale where risk is actually managed &mdash; local and city government.
-        </p>
-        <div class="opensource">
-          <div class="opensource-badge">Open Source &middot; Free to Use</div>
-          <p>The Scorecard is an open-source tool. Its methodology and assessment materials are openly published and free to apply &mdash; no license, no fee. The Advisory Board exists to keep it that way, and to distribute it globally for city- and company-scale pilots.</p>
-        </div>
+      <div class="challenge-card hz-card--teal">
+        <div class="hz-icon"><svg viewBox="0 0 576 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M269.5 69.9c11.1-7.9 25.9-7.9 37 0C329 85.4 356.5 96 384 96c26.9 0 55.4-10.8 77.4-26.1c0 0 0 0 0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 149.7 417 160 384 160c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4C42.8 92.6 61 83.5 75.3 71.6c11.1-9.5 27.3-10.1 39.2-1.7c0 0 0 0 0 0C136.7 85.2 165.1 96 192 96c27.5 0 55-10.6 77.5-26.1zm37 288C329 373.4 356.5 384 384 384c26.9 0 55.4-10.8 77.4-26.1c0 0 0 0 0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 437.7 417 448 384 448c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4c18.1-4.2 36.2-13.3 50.6-25.2c11.1-9.4 27.3-10.1 39.2-1.7c0 0 0 0 0 0C136.7 373.2 165.1 384 192 384c27.5 0 55-10.6 77.5-26.1c11.1-7.9 25.9-7.9 37 0zm0-144C329 229.4 356.5 240 384 240c26.9 0 55.4-10.8 77.4-26.1c0 0 0 0 0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 293.7 417 304 384 304c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4c18.1-4.2 36.2-13.3 50.6-25.2c11.1-9.5 27.3-10.1 39.2-1.7c0 0 0 0 0 0C136.7 229.2 165.1 240 192 240c27.5 0 55-10.6 77.5-26.1c11.1-7.9 25.9-7.9 37 0z"/></svg></div>
+        <div class="challenge-title">Hydrological</div>
+        <ul class="hz-list">
+          <li>Extreme wave event (e.g., tsunami)</li>
+          <li>Marine ecosystem degradation</li>
+          <li>Marine pollution (non-point source)</li>
+          <li>Marine pollution (point source)</li>
+          <li>Sea-level rise (SLR)</li>
+          <li>Secondary salinity (incl. saltwater intrusion)</li>
+          <li>Urban flooding</li>
+          <li>Natural flooding (incl. coastal)</li>
+        </ul>
       </div>
-          <div class="sc-cta">
-        <a href="https://www.preventionweb.net/publication/documents-and-publications/arise-coastal-resilience-scorecard" target="_blank" rel="noopener" class="btn-primary" style="display: block; text-align: center; padding: 1.2rem 2.5rem;">
-          Click here to download the Long Form and Short Form Scorecard Packages &rarr;
-        </a>
+
+      <div class="challenge-card hz-card--purple">
+        <div class="hz-icon"><svg viewBox="0 0 384 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 208C0 104.4 75.7 18.5 174.9 2.6C184 1.2 192 8.6 192 17.9l0 63.3c0 8.4 6.5 15.3 14.7 16.5C307 112.5 384 199 384 303.4c0 103.6-75.7 189.5-174.9 205.4c-9.2 1.5-17.1-5.9-17.1-15.2l0-63.3c0-8.4-6.5-15.3-14.7-16.5C77 398.9 0 312.4 0 208zm288 48A96 96 0 1 0 96 256a96 96 0 1 0 192 0zm-96-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg></div>
+        <div class="challenge-title">Meteorological</div>
+        <ul class="hz-list">
+          <li><strong>Extreme coastal event</strong> &mdash; convective, low-pressure and wind storms (hurricane, typhoon)</li>
+          <li><strong>Extreme temperature event</strong> &mdash; marine cold spell, marine heatwave, ocean rise via warming</li>
+        </ul>
       </div>
-</div>
+    </div>
+
+    <p class="hz-footnote reveal">Scoping to what is universal keeps the Scorecard comparable across cities and geographies.</p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
